@@ -45,14 +45,6 @@ return {
   },
 
   {
-    "nvimtools/none-ls.nvim",
-    event = "verylazy",
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
-
-  {
     "windwp/nvim-ts-autotag",
     ft = {
       "javascript",
@@ -71,10 +63,10 @@ return {
   },
 
   {
-    "pocco81/auto-save.nvim",
+    "0x00-ketsu/autosave.nvim",
     lazy = false,
     opts = {
-      trigger_events = { "FocusGained", "FocusLost" },
+      events = { "FocusGained", "FocusLost" },
     },
   },
 }
