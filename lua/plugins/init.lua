@@ -66,7 +66,7 @@ return {
     "0x00-ketsu/autosave.nvim",
     lazy = false,
     opts = {
-      events = { "FocusGained", "FocusLost" },
+      events = { "FocusGained", "FocusLost", "BufEnter", "BufLeave" },
     },
   },
 }
