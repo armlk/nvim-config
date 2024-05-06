@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "bufwritepre",
     config = function()
       require "configs.conform"
     end,
@@ -16,31 +16,65 @@ return {
   },
 
   {
-  	"williamboman/mason.nvim",
-  	opts = {
-  		ensure_installed = {
-  			"lua-language-server",
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
         "typescript-language-server",
         "tailwindcss-language-server",
         "eslint-lsp",
-  		},
-  	},
+        "prettierd",
+      },
+    },
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
         "lua",
         "vimdoc",
         "html",
-        "css"
-  		},
-  	},
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+      },
+    },
   },
 
   {
-    "abecodes/tabout.nvim",
+    "nvimtools/none-ls.nvim",
+    event = "verylazy",
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
+  {
+    "tpope/vim-surround",
+    lazy = false,
+  },
+
+  {
+    "pocco81/auto-save.nvim",
+    lazy = false,
+    opts = {
+      trigger_events = { "FocusGained", "FocusLost" },
+    },
   },
 }
