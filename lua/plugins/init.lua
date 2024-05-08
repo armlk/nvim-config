@@ -8,24 +8,35 @@ return {
   },
 
   {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "prettierd",
+      },
+    },
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = false,
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "cssls",
+        "html",
+        "tsserver",
+        "tailwindcss",
+        "eslint",
+      },
+    },
+  },
+
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
-  },
-
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "typescript-language-server",
-        "tailwindcss-language-server",
-        "eslint-lsp",
-        "prettierd",
-      },
-    },
   },
 
   {
