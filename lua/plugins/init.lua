@@ -11,7 +11,9 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "prettier",
         "prettierd",
+        "stylua",
       },
     },
   },
@@ -22,8 +24,6 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "cssls",
-        "html",
         "tsserver",
         "tailwindcss",
         "eslint",
@@ -77,7 +77,7 @@ return {
     "0x00-ketsu/autosave.nvim",
     lazy = false,
     opts = {
-      events = { "FocusGained", "FocusLost", "BufEnter", "BufLeave" },
+      events = { "FocusGained", "FocusLost" },
     },
   },
 }

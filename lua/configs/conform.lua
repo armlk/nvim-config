@@ -1,14 +1,16 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    css = { "prettierd" },
-    html = { "prettierd" },
-    javascript = { "prettierd" },
-    typescript = { "prettierd" },
+    css = { { "prettierd", "prettier" } },
+    html = { { "prettierd", "prettier" } },
+    javascript = { { "prettierd", "prettier" } },
+    javascriptreact = { { "prettierd", "prettier" } },
+    typescript = { { "prettierd", "prettier" } },
+    typescriptreact = { { "prettierd", "prettier" } },
   },
 
   format_on_save = {
-    timeout_ms = 2000,
+    timeout_ms = 500,
     lsp_fallback = true,
   },
 }
