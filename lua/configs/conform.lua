@@ -7,6 +7,7 @@ local options = {
     javascriptreact = { { "prettierd", "prettier" } },
     typescript = { { "prettierd", "prettier" } },
     typescriptreact = { { "prettierd", "prettier" } },
+    go = { "goimports", "gofmt" },
   },
 
   format_on_save = {
