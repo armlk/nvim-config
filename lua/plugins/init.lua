@@ -14,6 +14,7 @@ return {
         "prettier",
         "prettierd",
         "stylua",
+        "golines",
         "clang-format",
       },
     },
