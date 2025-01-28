@@ -26,11 +26,12 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "tsserver",
+        "ts_ls",
         "tailwindcss",
         "eslint",
         "clangd",
         "gopls",
+        "texlab",
       },
     },
   },
